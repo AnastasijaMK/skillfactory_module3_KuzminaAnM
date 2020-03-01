@@ -353,9 +353,73 @@ input {
     margin-bottom: 35px;
 }
 
-.container_checkbox, input[type="checkbox"] {
-	display: inline;
-	margin-bottom: 148px;
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-checkbox+label {
+  display: inline-flex;
+  align-items: left;
+  user-select: none;
+  margin-bottom: 148px;
+}
+
+.custom-checkbox1+label {
+  margin-bottom: 20px;
+}
+
+.custom-checkbox+label::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 1px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  margin-left: -55px;
+}
+
+.custom-checkbox1+label::before {
+  margin-left: 0px;
+}
+
+.custom-checkbox:checked+label::before {
+  border-color: #E3B873;
+  background-color: #E3B873;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-checkbox:focus:not(:checked)+label::before {
+  background-color: #E3B873;
+}
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox:disabled+label::before {
+  background-color: #E3B873;
+}
+
+.happy {
+	color: white;
+}
+
+.happy1 {
+	color: #131313;
+}
+
+
+.checkbox_text {
+	margin-left: -80px;
+	font-size: 14px;
+}
+
+.checkbox_text1 {
+	color: white;
 }
 
 .types_of_repair {
@@ -817,7 +881,7 @@ padding: 5px;
 }
 
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1440px) {
 .container { 
 	max-width: 340px;
 	margin: 0 auto;
