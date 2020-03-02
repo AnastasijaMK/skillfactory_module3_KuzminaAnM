@@ -353,6 +353,10 @@ input {
     margin-bottom: 35px;
 }
 
+.container_checkbox {
+	text-align: center;
+}
+
 .custom-checkbox {
   position: absolute;
   z-index: -1;
@@ -382,7 +386,6 @@ input {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 50%;
-  margin-left: -55px;
 }
 
 .custom-checkbox1+label::before {
@@ -406,19 +409,14 @@ input {
 
 .happy {
 	color: white;
-}
-
-.happy1 {
-	color: #131313;
-}
-
-
-.checkbox_text {
-	margin-left: -80px;
 	font-size: 14px;
 }
 
-.checkbox_text1 {
+.happy span {
+	margin-left: 10px;
+}
+
+.happy1 {
 	color: white;
 }
 
